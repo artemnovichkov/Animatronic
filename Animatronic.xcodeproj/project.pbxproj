@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		06B614581E0D01440067DA42 /* Animatronic.h in Headers */ = {isa = PBXBuildFile; fileRef = 06B614561E0D01440067DA42 /* Animatronic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06B614631E0D09790067DA42 /* Animatronic+Paths.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B6145F1E0D09790067DA42 /* Animatronic+Paths.swift */; };
+		06B614641E0D09790067DA42 /* Animatronic.h in Headers */ = {isa = PBXBuildFile; fileRef = 06B614601E0D09790067DA42 /* Animatronic.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		06B614651E0D09790067DA42 /* Animatronic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06B614611E0D09790067DA42 /* Animatronic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		06B614531E0D01440067DA42 /* Animatronic.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Animatronic.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		06B614561E0D01440067DA42 /* Animatronic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animatronic.h; sourceTree = "<group>"; };
-		06B614571E0D01440067DA42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06B6145F1E0D09790067DA42 /* Animatronic+Paths.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Animatronic+Paths.swift"; sourceTree = "<group>"; };
+		06B614601E0D09790067DA42 /* Animatronic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animatronic.h; sourceTree = "<group>"; };
+		06B614611E0D09790067DA42 /* Animatronic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animatronic.swift; sourceTree = "<group>"; };
+		06B614621E0D09790067DA42 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -30,7 +34,7 @@
 		06B614491E0D01440067DA42 = {
 			isa = PBXGroup;
 			children = (
-				06B614551E0D01440067DA42 /* Animatronic */,
+				06B6145E1E0D09790067DA42 /* Sources */,
 				06B614541E0D01440067DA42 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -43,13 +47,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		06B614551E0D01440067DA42 /* Animatronic */ = {
+		06B6145E1E0D09790067DA42 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				06B614561E0D01440067DA42 /* Animatronic.h */,
-				06B614571E0D01440067DA42 /* Info.plist */,
+				06B6145F1E0D09790067DA42 /* Animatronic+Paths.swift */,
+				06B614611E0D09790067DA42 /* Animatronic.swift */,
+				06B614601E0D09790067DA42 /* Animatronic.h */,
+				06B614621E0D09790067DA42 /* Info.plist */,
 			);
-			path = Animatronic;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -59,7 +65,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06B614581E0D01440067DA42 /* Animatronic.h in Headers */,
+				06B614641E0D09790067DA42 /* Animatronic.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,6 +138,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06B614631E0D09790067DA42 /* Animatronic+Paths.swift in Sources */,
+				06B614651E0D09790067DA42 /* Animatronic.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +254,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Animatronic/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.artemnovichkov.Animatronic;
@@ -265,7 +273,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = Animatronic/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.artemnovichkov.Animatronic;
@@ -294,6 +302,7 @@
 				06B6145D1E0D01440067DA42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

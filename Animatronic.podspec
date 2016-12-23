@@ -9,7 +9,7 @@ Pod::Spec.new do |spec|
     spec.platform       = :ios
     spec.requires_arc   = true
 
-    spec.ios.deployment_target  = '8.0'
+    spec.ios.deployment_target  = '9.0'
     spec.source                 = { git: "https://github.com/Otbivnoe/Animatronic.git", tag: "#{spec.version}"}
     spec.source_files           = "Sources/*.{h,swift}"
 end
