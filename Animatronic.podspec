@@ -1,15 +1,42 @@
-Pod::Spec.new do |spec|
-    spec.name           = "Animatronic"
-    spec.version        = "0.1"
-    spec.summary        = "lightweight working with image animation."
+#
+# Be sure to run `pod lib lint Animatronic.podspec' to ensure this is a
+# valid spec before submitting.
+#
+# Any lines starting with a # are optional, but their use is encouraged
+# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
+#
 
-    spec.homepage       = "https://github.com/artemnovichkov/Animatronic"
-    spec.license        = { type: 'MIT', file: 'LICENSE' }
-    spec.authors        = { "Artem Novichkov" => 'novichkoff93@gmail.com' }
-    spec.platform       = :ios
-    spec.requires_arc   = true
+Pod::Spec.new do |s|
+  s.name             = 'Animatronic'
+  s.version          = '0.1.0'
+  s.summary          = 'A short description of Animatronic.'
 
-    spec.ios.deployment_target  = '9.0'
-    spec.source                 = { git: "https://github.com/Otbivnoe/Animatronic.git", tag: "#{spec.version}"}
-    spec.source_files           = "Sources/*.{h,swift}"
+# This description is used to generate tags and improve search results.
+#   * Think: What does it do? Why did you write it? What is the focus?
+#   * Try to keep it short, snappy and to the point.
+#   * Write the description between the DESC delimiters below.
+#   * Finally, don't worry about the indent, CocoaPods strips it!
+
+  s.description      = <<-DESC
+TODO: Add long description of the pod here.
+                       DESC
+
+  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/Animatronic'
+  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.author           = { 'Artem Novichkov' => 'artem.novichkov@rosberry.com' }
+  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/Animatronic.git', :tag => s.version.to_s }
+  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+
+  s.ios.deployment_target = '8.0'
+
+  s.source_files = 'Animatronic/Classes/**/*'
+  
+  # s.resource_bundles = {
+  #   'Animatronic' => ['Animatronic/Assets/*.png']
+  # }
+
+  # s.public_header_files = 'Pod/Classes/**/*.h'
+  # s.frameworks = 'UIKit', 'MapKit'
+  # s.dependency 'AFNetworking', '~> 2.3'
 end

@@ -1,0 +1,16 @@
+PODS:
+  - Animatronic (0.1.0)
+
+DEPENDENCIES:
+  - Animatronic (from `../`)
+
+EXTERNAL SOURCES:
+  Animatronic:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Animatronic: 6e8221648f95529da51835c7aa773dda02c0671b
+
+PODFILE CHECKSUM: 250a1c3a1e7c0123b360fb0f6cf05c1d5ce4d2a2
+
+COCOAPODS: 1.1.1

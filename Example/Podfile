@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'Animatronic_Example' do
+  pod 'Animatronic', :path => '../'
+
+  target 'Animatronic_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
