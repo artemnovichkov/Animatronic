@@ -100,7 +100,9 @@ class Animatronic: UIImageView {
     
     private func startScreenUpdate() {
         displayLink = CADisplayLink(target: self, selector: .update)
-        displayLink!.preferredFramesPerSecond = 50
+        if #available(iOS 10, *) {
+            displayLink!.preferredFramesPerSecond = 50
+        }
         displayLink!.add(to: RunLoop.main, forMode: .commonModes)
     }
     
