@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum ResourcesType {
+public enum ResourcesType {
     
     case png
     case jpg
@@ -23,7 +23,7 @@ enum ResourcesType {
     }
 }
 
-extension Animatronic {
+public extension Animatronic {
     
     /// Returns the array of `UIImage`'s data.
     ///

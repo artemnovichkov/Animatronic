@@ -9,22 +9,22 @@
 import UIKit
 import QuartzCore
 
-typealias StopHandler = (() -> Void)
+public typealias StopHandler = (() -> Void)
 
-class Animatronic: UIImageView {
+public class Animatronic: UIImageView {
     
     /// The array of `UIImage`s converted to `Data`
-    var imagesData: [Data]? {
+    public var imagesData: [Data]? {
         didSet { reset() }
     }
     /// if YES, the Animatronic will display a first image after settings new images data
-    var keepLastAnimationImage = false
+    public var keepLastAnimationImage = false
     
     /// if YES, the Animatronic will display a firslast image after end of animation
-    var keepFirstAnimationImage = false
+    public var keepFirstAnimationImage = false
     
     /// Duration per frame in images data
-    var animationFrameDuration: TimeInterval
+    public var animationFrameDuration: TimeInterval
     
     private var displayLink: CADisplayLink?
     private var currentFrameIndex: Int = 0
@@ -37,12 +37,12 @@ class Animatronic: UIImageView {
     /// Initializes and returns a newly allocated Animatronic object with the specified duration per frame.
     ///
     /// - Parameter duration: Duration per frame in images data. Default duration is 1 / 60.
-    init(duration: TimeInterval = 1 / 60) {
+    public init(duration: TimeInterval = 1 / 60) {
         animationFrameDuration = duration
         super.init(frame: .zero)
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -53,7 +53,7 @@ class Animatronic: UIImageView {
     //MARK: - Public
     
     /// Starts animation. If the Animatronic are animating, it will stop previous animation.
-    func start() {
+    public func start() {
         stop()
         update()
         startScreenUpdate()
@@ -62,7 +62,7 @@ class Animatronic: UIImageView {
     /// Stops current animation.
     ///
     /// - Parameter forced: if YES, animation will stop immediately. Otherwise, animation will finish after last frame.
-    func stop(forced: Bool = true) {
+    public func stop(forced: Bool = true) {
         if forced {
             resetToInitialStateIfNeeded()
             invalidateTimerIfNeeded()
@@ -75,7 +75,7 @@ class Animatronic: UIImageView {
     /// Stops current animation after last frame with handler.
     ///
     /// - Parameter handler: Closure form handling end of animation
-    func stopAfterLoop(with handler: @escaping StopHandler) {
+    public func stopAfterLoop(with handler: @escaping StopHandler) {
         guard displayLink != nil else {
             handler()
             return
@@ -85,7 +85,7 @@ class Animatronic: UIImageView {
     }
     
     /// Resets state of the Animatronic
-    func reset() {
+    public func reset() {
         invalidateTimerIfNeeded()
         currentFrameIndex = 0
         if keepFirstAnimationImage {
