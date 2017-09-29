@@ -2,7 +2,7 @@
 *.sh linguist-generated
 *.liquid linguist-generated
 .idea linguist-generated
-Podfile linguist-generated
+^Podfile linguist-generated
 fastlane linguist-generated
 
 *.md linguist-documentation
